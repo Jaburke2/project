@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+          <img src= {% static "Cool_pic.jpg" %} class="img-thumbnail" alt="cool" height="200" width="200">
+          <figcaption>Fig.2 - Kitty</figcaption>
+<h2>Sign Up</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+</form>
+{% endblock content %}

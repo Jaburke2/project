@@ -1,0 +1,44 @@
+<!-- templates/post_new.html -->
+{% extends "base.html" %}
+{% block content %}
+<h1>New post</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+
+
+
+    <h4>Why are you posting this blog today?</h4>
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="Because I want too">
+        <label class="form-check-label" for="Because I want too">Because I want too</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="To let the World know my life" checked="">
+        <label class="form-check-label" for="To let the World know my life">To let the World know my life</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="I'm bored" checked="">
+        <label class="form-check-label" for="I'm bored">I'm bored</label>
+      </div>
+
+    <br>
+
+    <h4>News Alert</h4>
+    <p>How would you like your followers to be notified of this post?</p>
+    <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="formSwitchCheckDefault">
+        <label class="form-check-label" for="formSwitchCheckDefault">Email</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="formSwitchCheckChecked" checked="">
+        <label class="form-check-label" for="formSwitchCheckChecked">Newsfeed</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="formSwitchCheckChecked" checked="">
+        <label class="form-check-label" for="formSwitchCheckChecked">Text Message</label>
+      </div>
+    <input type="submit" value="Save" />
+</form>
+{% endblock content %}

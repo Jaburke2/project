@@ -1,5 +1,45 @@
-{% extends 'base.html' %}
-
+{% extends "base.html" %}
 {% block content %}
-<h1> Suhhhhhhhhduhhhh </h1>
+<main class="container-fluid">
+  <section class="container-fluid mt-1 card">
+    <h2 class="container">Recent Blog Posts</h2>
+    <div class="row">
+      {% for post in post_list %}
+      <div class="post-entry col">
+        <h2><div class="col-sm-6  text-white">
+            <a class="card-header" href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+        </div>
+        </h2>
+        <p class="card-body">{{ post.body }}</p>
+      </div>
+      {% endfor %}
+
+  <section class="container-fluid">
+      <h3> About Myself</h3>
+
+      <p2 class="text-primary col-4">My Name is Joshua Burke and I am a student at WTAMU currently Taking
+          CIDM 6325, E-Commerce.</p2>
+      
+  </section>
+
+  <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Details
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        <figure>
+          {% load static %}
+          <img src= {% static "josh_pic.JPG" %} class="img-thumbnail" alt="Josh" height="200" width="200">
+          <figcaption>Fig.1 - Joshua Burke</figcaption>
+      </figure>
+          The information within this part serves as and allows me to
+          use the Details tag.
+      </div>
+    </div>
+
+
+</main>
+
 {% endblock content %}
