@@ -23,4 +23,4 @@ urlpatterns = [
     path("accounts/", include('django.contrib.auth.urls')),
     path("accounts/", include("accounts.urls")),
     path("", include("blog.urls")),
-] + + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
