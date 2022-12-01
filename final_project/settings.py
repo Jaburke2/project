@@ -115,7 +115,7 @@ USE_TZ = True
 # https://warehouse.python.org/project/whitenoise/
 
 
-
+STATIC_ROOT = "/OneDrive/Desktop/Fall 2022/E-Commerce/Project/static/"
 STATIC_URL = "/static/"
 MEDIA_URL = "/media/"
 STATICFILES_DIRS = [str(BASE_DIR.joinpath("static"))]
